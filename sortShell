@@ -1,32 +1,7 @@
-import java.util.Date;
+import Arrays.java;
+
 class Shell{
-  
-  //input elapsed time
-  private static void measureTime(Runnable task) {
-          long startTime = System.currentTimeMillis();
-          task.run();
-          long elapsed = System.currentTimeMillis() - startTime;
-          System.out.println("Затраченное время: " + elapsed + " ms");
-  }
-  
-  //input array
-  public void printArray(int arr[]){
-      int n = arr.length;
-      for(int i=0; i<n; i++){
-          System.out.print(arr[i]+" ");
-      }
-      System.out.println();
-  }
-  
-  //create array with amout of elements equal 'n' and with diapason 'x'
-  public int[] createMassive(int n, int x){
-      int arr[] = new int [n];
-      for(int i=0; i<n;i++){
-          arr[i] = (int)(Math.random()*x);
-      }
-      return arr;
-  }
-  
+
   void sortShell(int arr[]) {
       //amount of array's elements
       int n=arr.length;
@@ -52,11 +27,12 @@ class Shell{
   
   public static void main(String args[]) { 
     Shell s = new Shell();
+    Arrays a = new Arrays();
     System.out.println("Исходный массив");
-    int arr[]=s.createMassive(7,100);
-    s.printArray(arr);
+    int arr[]=a.createMassive(7,100);
+    a.printArray(arr);
     System.out.println("Отсортированный массив");
     s.sortShell(arr);
-    s.printArray(arr);
+    a.printArray(arr);
   }
 }
