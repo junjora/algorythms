@@ -1,5 +1,5 @@
  import java.util.Date;
- class Arrays{
+ public class Arrays{
    //input elapsed time
     private static void measureTime(Runnable task) {
             long startTime = System.currentTimeMillis();
