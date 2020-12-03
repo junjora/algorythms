@@ -32,7 +32,7 @@ class Shell{
     int arr[]=a.createMassive(7,100);
     a.printArray(arr);
     System.out.println("Отсортированный массив");
-    s.sortShell(arr);
+    a.measureTime(()->s.sortShell(arr));
     a.printArray(arr);
   }
 }
