@@ -9,7 +9,7 @@
     }
 
     //input array
-    public void printArray(int arr[]){
+    public static void printArray(int arr[]){
         int n = arr.length;
         for(int i=0; i<n; i++){
             System.out.print(arr[i]+" ");
@@ -18,7 +18,7 @@
     }
 
     //create array with amout of elements equal 'n' and with diapason 'x'
-    public int[] createMassive(int n, int x){
+    public static int[] createMassive(int n, int x){
         int arr[] = new int [n];
         for(int i=0; i<n;i++){
             arr[i] = (int)(Math.random()*x);
