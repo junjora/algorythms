@@ -1,0 +1,62 @@
+import java.util.Date;
+class Shell{
+  
+  //input elapsed time
+  private static void measureTime(Runnable task) {
+          long startTime = System.currentTimeMillis();
+          task.run();
+          long elapsed = System.currentTimeMillis() - startTime;
+          System.out.println("Затраченное время: " + elapsed + " ms");
+  }
+  
+  //input array
+  public void printArray(int arr[]){
+      int n = arr.length;
+      for(int i=0; i<n; i++){
+          System.out.print(arr[i]+" ");
+      }
+      System.out.println();
+  }
+  
+  //create array with amout of elements equal 'n' and with diapason 'x'
+  public int[] createMassive(int n, int x){
+      int arr[] = new int [n];
+      for(int i=0; i<n;i++){
+          arr[i] = (int)(Math.random()*x);
+      }
+      return arr;
+  }
+  
+  void sortShell(int arr[]) {
+      //amount of array's elements
+      int n=arr.length;
+      //after each iteration, step div on 2
+      for(int d=n/2; d>0; d/=2){
+          //
+          for(int i=d; i<n; i++)
+          {
+              for(int j=i; j>=d; j--)
+              {
+                  /*if a[j] more than arr[j+d] than 
+                  swap them*/
+                  if(arr[j-d]>arr[j])
+                  {
+                      int temp=arr[j];
+                      arr[j]=arr[j-d];
+                      arr[j-d]=temp;
+                  }
+              }
+          }
+      }
+  }
+  
+  public static void main(String args[]) { 
+    Shell s = new Shell();
+    System.out.println("Исходный массив");
+    int arr[]=s.createMassive(7,100);
+    s.printArray(arr);
+    System.out.println("Отсортированный массив");
+    s.sortShell(arr);
+    s.printArray(arr);
+  }
+}
