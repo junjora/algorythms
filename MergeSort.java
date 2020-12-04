@@ -47,15 +47,13 @@
     }
     
     public static void main(String args[]) { 
-    MergeSort ms = new MergeSort();
-    Arrays a = new Arrays();
     System.out.println("Исходный массив");
-    int arr[]=a.createMassive(7,100);
-    a.printArray(arr);
+    int arr[]=Arrays.createMassive(7,100);
+    Arrays.printArray(arr);
     System.out.println("Отсортированный массив");
     int left = 0;//the first element
     int right = arr.length-1;//the last element
-    a.measureTime(()->ms.sort(arr, left, right));
-    a.printArray(arr);
+    Arrays.measureTime(()->MergeSort.sort(arr, left, right));
+    Arrays.printArray(arr);
   }
   }
