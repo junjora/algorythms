@@ -11,7 +11,7 @@
       }
     }
     
-    public static void mergeSort(int arr[], int left, int mid, int right){
+    private static void mergeSort(int arr[], int left, int mid, int right){
       int n1 = mid-left+1; //range if first subarray
       int n2 = right-mid; //range if second subarray
       //create two subarrays
