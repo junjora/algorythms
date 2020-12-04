@@ -31,13 +31,11 @@ class QuickSort{
    }
    
    public static void main(String args[]) { 
-    QuickSort qs = new QuickSort();
-    Arrays a = new Arrays();
     System.out.println("Исходный массив");
-    int arr[]=a.createMassive(7,100);
-    a.printArray(arr);
+    int arr[]=Arrays.createMassive(7,100);
+    Arrays.printArray(arr);
     System.out.println("Отсортированный массив");
-    a.measureTime(()->qs.sortQuick(arr));
-    a.printArray(arr);
+    Arrays.measureTime(()->QuickSort.sortQuick(arr));
+    Arrays.printArray(arr);
   }
 }
