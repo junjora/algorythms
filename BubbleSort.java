@@ -34,19 +34,17 @@ class BubbleSort{
   }
   
   public static void main(String args[]) { 
-    BubbleSort bs = new BubbleSort();
-    Arrays a = new Arrays();
     System.out.println("Исходный массив");
-    int arr1[]=a.createMassive(7,100);
-    a.printArray(arr1);
+    int arr1[]=Arrays.createMassive(7,100);
+    Arrays.printArray(arr1);
     System.out.println("Отсортированный массив");
-    a.measureTime(()->bs.bubbleSort(arr1));
-    a.printArray(arr1);
+    Arrays.measureTime(()->BubbleSort.bubbleSort(arr1));
+    Arrays.printArray(arr1);
     System.out.println("Исходный массив");
-    int arr2[]=a.createMassive(7,100);
-    a.printArray(arr2);
+    int arr2[]=Arrays.createMassive(7,100);
+    Arrays.printArray(arr2);
     System.out.println("Отсортированный массив");
-    a.measureTime(()->bs.bubbleSort(arr2));
-    a.printArray(arr2);
+    Arrays.measureTime(()->BubbleSort.bubbleSort(arr2));
+    Arrays.printArray(arr2);
   }
 }
