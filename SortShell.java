@@ -2,7 +2,7 @@ import Arrays.java;
 
 class Shell{
 
-  void sortShell(int arr[]) {
+  public static void sortShell(int arr[]) {
       //amount of array's elements
       int n=arr.length;
       //after each iteration, step div on 2
@@ -26,13 +26,11 @@ class Shell{
   }
   
   public static void main(String args[]) { 
-    Shell s = new Shell();
-    Arrays a = new Arrays();
     System.out.println("Исходный массив");
-    int arr[]=a.createMassive(7,100);
-    a.printArray(arr);
+    int arr[]=Arrays.createMassive(7,100);
+    Arrays.printArray(arr);
     System.out.println("Отсортированный массив");
-    a.measureTime(()->s.sortShell(arr));
-    a.printArray(arr);
+    Arrays.measureTime(()->Shell.sortShell(arr));
+    Arrays.printArray(arr);
   }
 }
