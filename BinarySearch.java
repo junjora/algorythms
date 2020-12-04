@@ -18,13 +18,11 @@ class BinarySearch{
   }
   
   public static void main(String args[]) { 
-    BinarySearch bs = new BinarySearch();
-    Arrays a = new Arrays();
     System.out.println("Исходный массив");
-    int arr[]=a.createMassive(7,100);
-    a.printArray(arr);
+    int arr[]=Arrays.createMassive(7,100);
+    Arrays.printArray(arr);
     System.out.println("Отсортированный массив");
-    a.measureTime(()->bs.binarySearch(arr));
-    a.printArray(arr);
+    Arrays.measureTime(()->BinarySearch.binarySearch(arr));
+    Arrays.printArray(arr);
   }
 }
