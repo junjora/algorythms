@@ -2,7 +2,7 @@ import Arrays.java;
 
 class QuickSort{
 
-  public static int partition(int arr[], int low, int high){
+  private static int partition(int arr[], int low, int high){
     int pivot = arr[high]; //choose pivot
     int i = (low-1); //index of smaller element
     for(int j=low; j<high; j++){
@@ -20,7 +20,7 @@ class QuickSort{
     return i+1;
   }
 
-  void sortQuick(int arr[], int low, int high){
+  public static void sortQuick(int arr[], int low, int high){
       if(low < high){
           //pi is partitioning index, arr[pi] is now at right place
           int pi = partition(arr, low, high);
