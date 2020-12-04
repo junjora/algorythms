@@ -22,12 +22,10 @@ class Fibonacci{
   }
   
   public static void main(String args[]) { 
-    Fibonacci f = new Fibonacci();
-    Arrays a = new Arrays();
     System.out.println("Recursive method of find number of Fibonacci");
-    a.measureTime(()->f.fiboRec(9));//34
+    Arrays.measureTime(()->Fibonacci.fiboRec(9));//34
     System.out.println("Dynamic method of find number of Fibonacci");
-    a.measureTime(()->f.fibo(9));//34
-    a.printArray(arr);
+    Arrays.measureTime(()->Fibonacci.fibo(9));//34
+    Arrays.printArray(arr);
   }
 }
